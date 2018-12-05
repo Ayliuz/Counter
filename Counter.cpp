@@ -2,26 +2,29 @@
 
 #include "Counter.h"
 
-int get_G(const char* str)
+Node* get_G(Tree* tr, const char* str)
 {
     S = str;
     BEGIN = str;
     CountError = 0;
 
-    int val = get_E();
-    if(CountError) return NAN;
+    Node* result = get_E();
+    if(CountError) return NULL;
 
     SynAssert(G, *S == '\0');
     SynAssert(G, S != str);
-    return val;
+
+    tree_set_root(tr, result);
+
+    return result;
 }
 
-int get_E()
+Node* get_E(Tree* tr)
 {
     const char* old_s = S;
 
     int val = get_T();
-    if(CountError) return NAN;
+    if(CountError) return NULL;
 
     while(*S == '+' || *S == '-')
     {
@@ -38,24 +41,25 @@ int get_E()
         }
     }
     SynAssert(E, S != old_s);
+
     return val;
 }
 
-int get_T()
+Node* get_T(Tree* tr)
 {
     const char* old_s = S;
 
-    int val = get_P();
-    if(CountError) return NAN;
+    Node* result = get_P();
+    if(CountError) return NULL;
 
     while(*S == '*' || *S == '/')
     {
         int op = *S;
         S++;
-        int mul = get_P();
+        Node* mul = get_P();
         if(op == '*')
         {
-            val *= mul;
+            result->info *= mul->info;
         }
         else
         {
@@ -63,20 +67,21 @@ int get_T()
         }
     }
     SynAssert(T, S != old_s);
-    return val;
+
+    return result;
 }
 
-int get_P()
+Node* get_P(Tree* tr)
 {
-    if(CountError) return NAN;
+    if(CountError) return NULL;
 
     if(*S == '(')
     {
         S++;
-        int val = get_E();
+        Node* result = get_E();
         SynAssert(P, *S == ')');
         S++;
-        return val;
+        return result;
     }
     else
     {
@@ -84,11 +89,11 @@ int get_P()
     }
 }
 
-int get_N()
+Node* get_N(Tree* tr)
 {
     const char* old_s = S;
 
-    if(CountError) return NAN;
+    if(CountError) return NULL;
 
     int val = 0;
     while(isdigit(*S))
@@ -97,5 +102,18 @@ int get_N()
         S++;
     }
     SynAssert(N, S != old_s);
-    return val;
+
+    return node_create(CONST, val);
+}
+
+Node* tree_operate_create(Tree* tr, tree_type oper, tree_type value1, tree_type value2)
+{
+    assert(tr);
+
+    Node* new_branch = node_create(OP, oper);
+
+    tree_insert_left(tr, new_branch, CONST, val1);
+    tree_insert_right(tr, new_branch, CONST, val2);
+
+    return new_branch;
 }

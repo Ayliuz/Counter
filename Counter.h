@@ -11,6 +11,7 @@
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
+#include "CountTree.h"
 
 #ifndef $
 #define $(x) std::cout<<"~"<<#x " = "<<x<<"\n";
@@ -27,10 +28,10 @@ static const char* S = NULL;
 static const char* BEGIN = NULL;
 static int CountError = 0;
 
-int get_G(const char* str);
-int get_E();
-int get_T();
-int get_P();
-int get_N();
+Node* get_G(Tree* tree, const char* str);
+Node* get_E(Tree* tree);
+Node* get_T(Tree* tree);
+Node* get_P(Tree* tree);
+Node* get_N(Tree* tree);
 
 #endif // COUNTER_H_INCLUDED
