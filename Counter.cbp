@@ -32,7 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CountTree.cpp" />
+		<Unit filename="CountTree.h" />
+		<Unit filename="Counter.cpp" />
+		<Unit filename="Counter.h" />
+		<Unit filename="Operators.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="stack.cpp" />
+		<Unit filename="stack.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
