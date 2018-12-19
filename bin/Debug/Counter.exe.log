@@ -14199,3 +14199,1523 @@ Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
 Directory:	C:\Users\zue26\Documents\GitHub\Counter
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x6AF8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (376):
+
+    374:     *out_vertex_num += ver_num_increase;
+    375: 
+=>  376:     fprintf(out_report, "%s \\newline", States[CIRCLE_INDEX]);
+    377:     fprintf(out_report, "$$ Let's make a differential of: $$");
+    378:     leaf_print(out_report, Common_AST, node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (306):
+
+    304: 
+    305:     int diff_tree_size = 0;
+=>  306:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    307: 
+    308:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:21:04
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x6AF8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (376):
+
+    374:     *out_vertex_num += ver_num_increase;
+    375: 
+=>  376:     fprintf(out_report, "%s \\newline", States[CIRCLE_INDEX]);
+    377:     fprintf(out_report, "$$ Let's make a differential of: $$");
+    378:     leaf_print(out_report, Common_AST, node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (306):
+
+    304: 
+    305:     int diff_tree_size = 0;
+=>  306:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    307: 
+    308:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:21:04
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x66FC (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (376):
+
+    374:     *out_vertex_num += ver_num_increase;
+    375: 
+=>  376:     fprintf(out_report, "%s \\newline", States[CIRCLE_INDEX]);
+    377:     fprintf(out_report, "$$ Let's make a differential of: $$");
+    378:     leaf_print(out_report, Common_AST, node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (306):
+
+    304: 
+    305:     int diff_tree_size = 0;
+=>  306:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    307: 
+    308:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD88 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:22:05
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x66FC (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (376):
+
+    374:     *out_vertex_num += ver_num_increase;
+    375: 
+=>  376:     fprintf(out_report, "%s \\newline", States[CIRCLE_INDEX]);
+    377:     fprintf(out_report, "$$ Let's make a differential of: $$");
+    378:     leaf_print(out_report, Common_AST, node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (306):
+
+    304: 
+    305:     int diff_tree_size = 0;
+=>  306:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    307: 
+    308:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD88 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:22:04
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x002E6867. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x3AD8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x004030FA in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (377):
+
+    375: 
+    376:         $(CIRCLE_INDEX);
+=>  377:     fprintf(out_report, "%s \\newline", States[CIRCLE_INDEX]);
+    378:     fprintf(out_report, "$$ Let's make a differential of: $$");
+    379:     leaf_print(out_report, Common_AST, node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (306):
+
+    304: 
+    305:     int diff_tree_size = 0;
+=>  306:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    307: 
+    308:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD84 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:23:12
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x002E6867. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x3AD8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x004030FA in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (377):
+
+    375: 
+    376:         $(CIRCLE_INDEX);
+=>  377:     fprintf(out_report, "%s \\newline", States[CIRCLE_INDEX]);
+    378:     fprintf(out_report, "$$ Let's make a differential of: $$");
+    379:     leaf_print(out_report, Common_AST, node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (306):
+
+    304: 
+    305:     int diff_tree_size = 0;
+=>  306:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    307: 
+    308:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD84 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:23:12
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x50FC (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (381):
+
+    379: 
+    380: 
+=>  381:     PRINT_REPORT("Let's make a differential of: ", node);
+    382:     PRINT_REPORT("It's going to be: ", new_node);
+    383: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:29:43
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x50FC (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (381):
+
+    379: 
+    380: 
+=>  381:     PRINT_REPORT("Let's make a differential of: ", node);
+    382:     PRINT_REPORT("It's going to be: ", new_node);
+    383: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (43):
+
+     41:         fprintf(out_report, "\\right)'");
+     42: 
+=>   43:         AST_diff("x", Counter, ROOT(Counter));
+     44: 
+     45:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:21:00, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:29:43
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0xA00 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (381):
+
+    379: 
+    380: 
+=>  381:     PRINT_REPORT("Let's make a differential of: ", node);
+    382:     PRINT_REPORT("It's going to be: ", new_node);
+    383: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:35:06
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0xA00 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (381):
+
+    379: 
+    380: 
+=>  381:     PRINT_REPORT("Let's make a differential of: ", node);
+    382:     PRINT_REPORT("It's going to be: ", new_node);
+    383: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:35:06
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x1CE8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (382):
+
+    380: 
+    381:     Circle_Count = (Circle_Count * 321) % 53;
+=>  382:     fprintf(out_report, "$$ %s \\newline $$ \n", STATES[ Circle_Count % 10]);
+    383:     PRINT_REPORT("Let's make a differential of: ", node);
+    384:     PRINT_REPORT("It's going to be: ", new_node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD6C in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:35:51
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x1CE8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (382):
+
+    380: 
+    381:     Circle_Count = (Circle_Count * 321) % 53;
+=>  382:     fprintf(out_report, "$$ %s \\newline $$ \n", STATES[ Circle_Count % 10]);
+    383:     PRINT_REPORT("Let's make a differential of: ", node);
+    384:     PRINT_REPORT("It's going to be: ", new_node);
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD6C in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:35:51
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x002E6867. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x8650 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x004030B0 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (383):
+
+    381:     Circle_Count = (Circle_Count * 321) % 53;
+    382:     fprintf(out_report, "$$ %i \\newline $$ \n", Circle_Count);
+=>  383:     PRINT_REPORT("Let's make a differential of: ", node);
+    384:     PRINT_REPORT("It's going to be: ", new_node);
+    385: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD3C in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:36:50
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x002E6867. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x8650 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x004030B0 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (383):
+
+    381:     Circle_Count = (Circle_Count * 321) % 53;
+    382:     fprintf(out_report, "$$ %i \\newline $$ \n", Circle_Count);
+=>  383:     PRINT_REPORT("Let's make a differential of: ", node);
+    384:     PRINT_REPORT("It's going to be: ", new_node);
+    385: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FD3C in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:36:49
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x5788 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (380):
+
+    378:     *out_vertex_num += ver_num_increase;
+    379: 
+=>  380:     PRINT_REPORT("Let's make a differential of: ", node);
+    381:     PRINT_REPORT("It's going to be: ", new_node);
+    382: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:42:38
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x5788 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403065 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (380):
+
+    378:     *out_vertex_num += ver_num_increase;
+    379: 
+=>  380:     PRINT_REPORT("Let's make a differential of: ", node);
+    381:     PRINT_REPORT("It's going to be: ", new_node);
+    382: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCF4 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:42:38
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x5A5C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403063 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (380):
+
+    378:     *out_vertex_num += ver_num_increase;
+    379: 
+=>  380:     PRINT_REPORT("Let's make a differential of: ", node);
+    381:     PRINT_REPORT("It's going to be: ", new_node);
+    382: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCEC in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:43:14
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x74616874. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x5A5C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x00403063 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (380):
+
+    378:     *out_vertex_num += ver_num_increase;
+    379: 
+=>  380:     PRINT_REPORT("Let's make a differential of: ", node);
+    381:     PRINT_REPORT("It's going to be: ", new_node);
+    382: 
+
+# 3 0x00402AA5 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (185):
+
+    183: 
+    184: 
+=>  185: OP_DEF(DIV, 2, "/", result = LEFT_COUNT / RIGHT_COUNT,
+    186: 
+    187:             Node* left_top_branch = OPERATE(MUL, DIF(LEFT(node)), COPY(RIGHT(node)));
+
+# 4 0x00402ED1 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (310):
+
+    308: 
+    309:     int diff_tree_size = 0;
+=>  310:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    311: 
+    312:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FCEC in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (45):
+
+     43:         fprintf(out_report, "\\right)'");
+     44: 
+=>   45:         AST_diff("x", Counter, ROOT(Counter));
+     46: 
+     47:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:35:03, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:43:14
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x80C80000. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x36F4 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x0040301D in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (383):
+
+    381:     *out_vertex_num += ver_num_increase;
+    382: 
+=>  383:     PRINT_REPORT("Let's make a differential of: ", node);
+    384:     PRINT_REPORT("It's going to be: ", new_node);
+    385: 
+
+# 3 0x00402962 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (100):
+
+     98: 
+     99: 
+=>  100: OP_DEF(SUB, 3, "-", result = LEFT_COUNT - RIGHT_COUNT,
+    101: 
+    102:             NEW_NODE(OPERATE(SUB, DIF(LEFT(node)), DIF(RIGHT(node))));,
+
+# 4 0x00402F58 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (313):
+
+    311: 
+    312:     int diff_tree_size = 0;
+=>  313:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    314: 
+    315:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FBCC in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (40):
+
+     38:         fprintf(out_report, "\\right)'");
+     39: 
+=>   40:         AST_diff("x", Counter, ROOT(Counter));
+     41: 
+     42:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:44:16, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:48:02
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x73F7B0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x80C80000. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022F0 (32-bit), Flags: Cmdre0, Thread: 0x36F4 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x73F7B0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x73F73667 in C:\WINDOWS\System32\msvcrt.dll: fprintf()
+
+# 2 0x0040301D in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (383):
+
+    381:     *out_vertex_num += ver_num_increase;
+    382: 
+=>  383:     PRINT_REPORT("Let's make a differential of: ", node);
+    384:     PRINT_REPORT("It's going to be: ", new_node);
+    385: 
+
+# 3 0x00402962 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (100):
+
+     98: 
+     99: 
+=>  100: OP_DEF(SUB, 3, "-", result = LEFT_COUNT - RIGHT_COUNT,
+    101: 
+    102:             NEW_NODE(OPERATE(SUB, DIF(LEFT(node)), DIF(RIGHT(node))));,
+
+# 4 0x00402F58 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: leaf_diff() at C:/Users/zue26/Documents/GitHub/Counter/Operators.h (347):
+
+    345:                             leaf_print(print_file, AST, RIGHT(LEFT(node)));\
+    346: 
+=>  347: OP_DEF(POW, 1, "^", pow(LEFT_COUNT, RIGHT_COUNT),
+    348: 
+    349:             Node* same =            COPY(node);
+
+# 5 0x00402795 in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: AST_diff() at C:/Users/zue26/Documents/GitHub/Counter/Counter.cpp (313):
+
+    311: 
+    312:     int diff_tree_size = 0;
+=>  313:     Node* Diff_node = leaf_diff(var_index, start_node, &diff_tree_size);
+    314: 
+    315:     tree_node_replace(AST, start_node, Diff_node);
+
+# 6 0x0041FBCC in C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe: main() at C:/Users/zue26/Documents/GitHub/Counter/main.cpp (40):
+
+     38:         fprintf(out_report, "\\right)'");
+     39: 
+=>   40:         AST_diff("x", Counter, ROOT(Counter));
+     41: 
+     42:         AST_simplify(Counter, ROOT(Counter));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	D:\TX\TXlib.h
+Compiled:	Dec 19 2018 10:44:16, GNU g++ 5.1.0, std=199711L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 19 2018 10:48:03
+
+Run file:	C:\Users\zue26\Documents\GitHub\Counter\bin\Debug\Counter.exe
+Directory:	C:\Users\zue26\Documents\GitHub\Counter
+
+--------------------------------------------------

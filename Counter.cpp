@@ -20,6 +20,20 @@
                                             };\
 
 
+extern FILE* out_report;
+extern Tree* Common_AST;
+
+int Circle_Count = 1;
+const char* STATES[10] = {"We can see, that it is not good enough.", "As you may want to continue.", "",\
+                            "Let's stop and think...", "", "", "Aren't you feeling old.", "I think, its time to stop, but we must go on.", "", "Would you like to commit a suicide? I would."};
+
+
+#define PRINT_REPORT(state, node)   Circle_Count = (Circle_Count + 1) % 10;\
+                                    fprintf(out_report, "$$ %s \n", STATES[Circle_Count]);\
+                                    fprintf(out_report, state "$$");\
+                                    leaf_print(out_report, Common_AST, node);
+
+
 Tree* get_G(const char* str)
 {
     Tree* AST = (Tree*) calloc(1, sizeof(*AST));
@@ -365,6 +379,10 @@ Node* leaf_diff(int var_index, Node* node, int *out_vertex_num)
     }
 
     *out_vertex_num += ver_num_increase;
+
+    PRINT_REPORT("Let's make a differential of: ", node);
+    PRINT_REPORT("It's going to be: ", new_node);
+
     return new_node;
 }
 
@@ -411,6 +429,8 @@ int leaf_simplify(Node* node, int* out_vertex_num)
         return 1;
     }
 
+    PRINT_REPORT("Let's simplify the expression: ", node);
+
 
     switch(node->type)
     {
@@ -442,6 +462,8 @@ int leaf_simplify(Node* node, int* out_vertex_num)
 
     }
 
+    PRINT_REPORT("It turned out: ", node);
+
     return 0;
 }
 
@@ -457,12 +479,12 @@ void tex_begin(FILE* write_file)
             \\usepackage{indentfirst}\n\
             \\usepackage{amsmath}\n\
             \\begin{document}\n\
-            $\n");
+            $$\n");
 }
 
 void tex_end(FILE* write_file)
 {
-    fprintf(write_file, "\n $ \n \\end{document}");
+    fprintf(write_file, "\n $$ \n \\end{document}");
 }
 
 void tex_launch(const char* tex_name, const char* pdf_name)
@@ -520,7 +542,7 @@ int leaf_print(FILE* print_file, Tree* AST, Node* node)
 
         case OP:
             {
-                if (PARENT(node) && (OPER_VAL(PARENT(node)) != DIV) && (operation_priority(OPER_VAL(node)) > operation_priority(OPER_VAL(PARENT(node)))))
+                if (PARENT(node) && (OPER_VAL(PARENT(node)) != DIV) && (operation_priority(OPER_VAL(node)) >= operation_priority(OPER_VAL(PARENT(node)))))
                 {
                     FPRINTF(" \\left( ");
                     priority = 1;

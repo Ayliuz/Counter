@@ -25,6 +25,8 @@
                                         return NULL;\
                                     }\
 
+#define EQ fprintf(out_report, " = ")
+
 static const char* S = NULL;
 static const char* BEGIN = NULL;
 static int CountError = 0;
@@ -50,6 +52,8 @@ int leaf_simplify(Node* node, int *out_vertex_num);
 
 int AST_print(const char PRINTNAME[], Tree* AST);
 void tex_begin(FILE* write_file);
+void tex_end(FILE* write_file);
+void tex_launch(const char* tex_name, const char* pdf_name);
 
 int leaf_print(FILE* print_file, Tree* AST, Node* node);
 int operation_priority(int operation);

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1545175832 source:c:\users\zue26\documents\github\counter\counter.cpp
+1545205975 source:c:\users\zue26\documents\github\counter\counter.cpp
 	"Counter.h"
 	"Operators.h"
 	"Operators.h"
@@ -8,7 +8,7 @@
 	"Operators.h"
 	"Operators.h"
 
-1545175852 c:\users\zue26\documents\github\counter\counter.h
+1545201632 c:\users\zue26\documents\github\counter\counter.h
 	<stdio.h>
 	<stdlib.h>
 	<cstdlib>
@@ -19,7 +19,7 @@
 	<ctype.h>
 	"CountTree.h"
 
-1545176984 source:c:\users\zue26\documents\github\counter\main.cpp
+1545205835 source:c:\users\zue26\documents\github\counter\main.cpp
 	"D:\TX\TXlib.h"
 	<iostream>
 	<stdio.h>
@@ -69,7 +69,7 @@
 	<rtcapi.h>
 	<dbghelp.h>
 
-1545176347 c:\users\zue26\documents\github\counter\counttree.h
+1545178027 c:\users\zue26\documents\github\counter\counttree.h
 	<stdio.h>
 	<stdlib.h>
 	<cstdlib>
@@ -81,7 +81,7 @@
 	<direct.h>
 	"stack.h"
 
-1544028567 c:\users\zue26\documents\github\counter\stack.h
+1545178027 c:\users\zue26\documents\github\counter\stack.h
 	<stdio.h>
 	<stdlib.h>
 	<iostream>
@@ -90,13 +90,13 @@
 	<math.h>
 	<ctype.h>
 
-1544625579 source:c:\users\zue26\documents\github\counter\stack.cpp
+1545178027 source:c:\users\zue26\documents\github\counter\stack.cpp
 	"stack.h"
 
-1545176331 source:c:\users\zue26\documents\github\counter\counttree.cpp
+1545178027 source:c:\users\zue26\documents\github\counter\counttree.cpp
 	"CountTree.h"
 	"Operators.h"
 	"Operators.h"
 
-1545176901 c:\users\zue26\documents\github\counter\operators.h
+1545178027 c:\users\zue26\documents\github\counter\operators.h
 

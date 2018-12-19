@@ -1,5 +1,29 @@
 digraph ge
 {
  splines = "polyline";
-9692936 [shape = record, style = filled, fillcolor = "cyan", label = "{00000000 | { 1 | 1.59525 }| 0093E708 | {<l> 00000000 | <r> 00000000 }} "];
+8906912 [shape = record, style = filled, fillcolor = "yellow", label = "{00000000 | { 3 | ^ }| 0087E8A0 | {<l> 0087E710 | <r> 0087E990 }} "];
+8906912:<l> -> 8906512 ;
+8906912:<r> -> 8907152 ;
+8906512 [shape = record, style = filled, fillcolor = "yellow", label = "{0087E8A0 | { 3 | - }| 0087E710 | {<l> 0087E4C8 | <r> 0087E648 }} "];
+8906512:<l> -> 8905928 ;
+8906512:<r> -> 8906312 ;
+8905928 [shape = record, style = filled, fillcolor = "cyan", label = "{0087E710 | { 1 | 3 }| 0087E4C8 | {<l> 00000000 | <r> 00000000 }} "];
+8906312 [shape = record, style = filled, fillcolor = "yellow", label = "{0087E710 | { 3 | ^ }| 0087E648 | {<l> 0087E8F0 | <r> 0087E9B8 }} "];
+8906312:<l> -> 8906992 ;
+8906312:<r> -> 8907192 ;
+8906992 [shape = record, style = filled, fillcolor = "yellow", label = "{0087E648 | { 3 | cos }| 0087E8F0 | {<l> 00000000 | <r> 0087E878 }} "];
+l8906992[shape = none, label = ""];
+ 8906992:<l> -> l8906992[style = "invis"];
+8906992:<r> -> 8906872 ;
+8906872 [shape = record, style = filled, fillcolor = "yellow", label = "{0087E8F0 | { 3 | ln }| 0087E878 | {<l> 00000000 | <r> 0087E5D0 }} "];
+l8906872[shape = none, label = ""];
+ 8906872:<l> -> l8906872[style = "invis"];
+8906872:<r> -> 8906192 ;
+8906192 [shape = record, style = filled, fillcolor = "cyan", label = "{0087E878 | { 1 | 2 }| 0087E5D0 | {<l> 00000000 | <r> 00000000 }} "];
+8907192 [shape = record, style = filled, fillcolor = "cyan", label = "{0087E648 | { 1 | 3 }| 0087E9B8 | {<l> 00000000 | <r> 00000000 }} "];
+8907152 [shape = record, style = filled, fillcolor = "yellow", label = "{0087E8A0 | { 3 | / }| 0087E990 | {<l> 0087E738 | <r> 0087E918 }} "];
+8907152:<l> -> 8906552 ;
+8907152:<r> -> 8907032 ;
+8906552 [shape = record, style = filled, fillcolor = "cyan", label = "{0087E990 | { 1 | 1 }| 0087E738 | {<l> 00000000 | <r> 00000000 }} "];
+8907032 [shape = record, style = filled, fillcolor = "cyan", label = "{0087E990 | { 1 | 2 }| 0087E918 | {<l> 00000000 | <r> 00000000 }} "];
 }
