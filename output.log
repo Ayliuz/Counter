@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.18)  19 DEC 2018 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.18)  19 DEC 2018 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -181,62 +181,24 @@ LaTeX Font Info:    ... okay on input line 4.
 
 [1
 
-{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (338.32698pt too wide) detected at line 41
-[][] \OMS/cmsy/m/n/12 ^^A []
- []
-
-[3] [4] [5] [6] [7] [8] [9]
-Overfull \hbox (22.28276pt too wide) detected at line 135
-[] \OMS/cmsy/m/n/12 ^^A []
- []
-
-
-Overfull \hbox (22.28276pt too wide) detected at line 136
-[] \OMS/cmsy/m/n/12 ^^A []
- []
-
-
-Overfull \hbox (65.62975pt too wide) detected at line 137
-[]
- []
-
-
-Overfull \hbox (45.28276pt too wide) detected at line 138
-[]
- []
-
-
-Overfull \hbox (141.60815pt too wide) detected at line 139
-[][] \OMS/cmsy/m/n/12 ^^A []
- []
-
-
-Overfull \hbox (141.60815pt too wide) detected at line 141
-[][] \OMS/cmsy/m/n/12 ^^A []
- []
-
-[10] (./output.aux) ) 
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+[4] [5] (./output.aux) ) 
 Here is how much of TeX's memory you used:
  2855 strings out of 492641
  51022 string characters out of 6133116
- 218747 words of memory out of 5000000
+ 212747 words of memory out of 5000000
  6778 multiletter control sequences out of 15000+600000
  7050 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,51p,9121b,136s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2018/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb>
-Output written on output.pdf (10 pages, 79201 bytes).
+ 42i,7n,51p,9121b,136s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on output.pdf (5 pages, 41255 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

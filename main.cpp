@@ -25,8 +25,8 @@ int main()
 
     txSetConsoleAttr (0xf0);
 
-    char expression[1000] = "(3 - (cos(ln(x)))^3)^(1/2)";
-    //scanf("%s", expression);
+    char expression[1000] = "";//"(3 - (cos(ln(x)))^3)^(1/2)";
+    scanf("%s", expression);
 
     Tree* Counter = get_G(expression);
 

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1545205975 source:c:\users\zue26\documents\github\counter\counter.cpp
+1545206080 source:c:\users\zue26\documents\github\counter\counter.cpp
 	"Counter.h"
 	"Operators.h"
 	"Operators.h"
@@ -19,7 +19,7 @@
 	<ctype.h>
 	"CountTree.h"
 
-1545205835 source:c:\users\zue26\documents\github\counter\main.cpp
+1545207810 source:c:\users\zue26\documents\github\counter\main.cpp
 	"D:\TX\TXlib.h"
 	<iostream>
 	<stdio.h>
